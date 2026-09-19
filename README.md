@@ -1,50 +1,37 @@
-# Civic Issue Reporting Portal
+# Civic Issue Reporting System
 
-A web-based platform designed to empower citizens by allowing them to report local civic issues (such as potholes, broken streetlights, or waste management problems) directly to the relevant municipal authorities.
+A clean and accessible web interface built for citizens to report neighborhood issues such as potholes, waste mismanagement, and street lighting failures directly to municipal services.
 
 ## 🚀 Features
-* **User Authentication:** Secure registration and login for both citizens and administrative officials.
-* **Issue Reporting:** Interactive forms enabling users to submit descriptions, categories, and upload image evidence.
-* **Geolocation Tracking:** Integration with maps to pinpoint the exact location of the reported issue.
-* **Status Dashboard:** Real-time tracking system showing whether an issue is "Pending", "In Progress", or "Resolved".
 
-## 🛠️ Tech Stack
-* **Frontend:** HTML5, CSS3, JavaScript (or specify framework like React / Vue)
-* **Backend:** Node.js / Express (or Python / Django)
-* **Database:** MongoDB / PostgreSQL
+* **Hero Section:** An engaging introduction greeting users and encouraging community action.
+* **Service Cards:** A modular grid highlighting the three main reporting workflows:
+  * **Pothole Repair:** Log street damages and cracks.
+  * **Waste Management:** Report missed trash collections or illegal dumping.
+  * **Street Light Fixes:** Flag dark areas and broken lamps.
+* **Responsive Layout:** Structured to adapt seamlessly between desktop and mobile devices.
 
-## 💻 Getting Started
+---
 
-### Prerequisites
-Make sure you have the following installed on your local machine:
-* [Node.js](https://nodejs.org) (v16 or higher)
-* [Git](https://git-scm.com)
+## 🎨 Project Modules
 
-### Installation Steps
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com
-   ```
-2. **Navigate to the project directory:**
-   ```bash
-   cd civic-issue-reporting
-   ```
-3. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-4. **Start the development server:**
-   ```bash
-   npm start
-   ```
+### ⚙️ Core System
+The primary engine driving this portal is housed inside our standalone package directory:
 
-## 🤝 Contributing
-Contributions make the open-source community an amazing place to learn, inspire, and create. 
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+*   📂 **[Explore Infravision Module](./Infravision)**
+    *   *This directory contains our internal asset structures, processing workflows, and custom tracking components.*
 
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
+---
+
+## 📁 Repository Blueprint
+
+```text
+📦 civic-issue-reporting
+ ┣ 📂 Infravision          # Main sub-module configurations & logic
+ ┃ ┣ 📄 index.html         # Core user reporting portal interface
+ ┃ ┣ 📄 style.css          # Dynamic styling & theme variables
+ ┃ ┗ 📄 script.js          # Interactive workflows & modal popups
+ ┗ 📄 README.md            # Global documentation blueprint
+```
+
+---
