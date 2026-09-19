@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infravision — Civic Issue Reporting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow" data-i18n="eyebrow">Civic issue reporting</div>
+  <h1 data-i18n="title">Infravision</h1>
+  <p class="tagline" data-i18n="tagline">Report potholes, garbage, and water leaks in your neighborhood. Track every issue from report to resolution.</p>
+  <div class="lang-row">
+    <button class="lang-btn active" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="hi">हिन्दी</button>
+    <button class="lang-btn" data-lang="bn">বাংলা</button>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><div class="num" id="statTotal">0</div><div class="lbl" data-i18n="statTotal">Issues reported</div></div>
+  <div class="stat"><div class="num" id="statResolved">0</div><div class="lbl" data-i18n="statResolved">Resolved</div></div>
+  <div class="stat"><div class="num" id="statPoints">0</div><div class="lbl" data-i18n="statPoints">Your points</div></div>
+</div>
+
+<section>
+  <h2 data-i18n="reportHeading">Report an issue</h2>
+  <form id="issueForm">
+    <div class="row2">
+      <div class="field">
+        <label data-i18n="labelCategory">Category</label>
+        <select id="category">
+          <option value="Pothole" data-i18n="catPothole">Pothole</option>
+          <option value="Garbage" data-i18n="catGarbage">Garbage</option>
+          <option value="Water Leak" data-i18n="catWater">Water leak</option>
+          <option value="Other" data-i18n="catOther">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label data-i18n="labelLocation">Location</label>
+        <input type="text" id="location" placeholder="Street, landmark or area" data-i18n-ph="phLocation">
+      </div>
+    </div>
+    <div class="field">
+      <label data-i18n="labelDesc">Description</label>
+      <textarea id="description" placeholder="What did you see?" data-i18n-ph="phDesc"></textarea>
+    </div>
+    <button type="submit" class="submit-btn" data-i18n="submitBtn">Submit report</button>
+    <div class="flag" id="flagMsg"></div>
+  </form>
+</section>
+
+<section>
+  <h2 data-i18n="dashHeading">Dashboard</h2>
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+    <button class="filter-btn" data-filter="Reported" data-i18n="filterReported">Reported</button>
+    <button class="filter-btn" data-filter="Verified" data-i18n="filterVerified">Verified</button>
+    <button class="filter-btn" data-filter="Resolved" data-i18n="filterResolved">Resolved</button>
+  </div>
+  <div id="issueList"></div>
+</section>
+
+<footer data-i18n="footer">Demo prototype for Infravision — Smart India Hackathon 2025. Data is stored only in this browser.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
